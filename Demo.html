@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- 
+            Author: Stanley
+            Date: 2021-12-27
+            Welcome to my latest HTML demo. This page uses two CSS files and one JavaScript files
+            It should be noted the first CSS file is an external reference to w3Schools.
+            w3Schools provides many classes that are used to style this HTML page
+            To learn more, go here: https://www.w3schools.com/w3css/default.asp
+        -->
+        
+        <title>Demo</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- w3Schools external CSS file -->
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+        
+        
+        <!-- This is a custom CSS file saved in the Sources folder -->
+        <link rel='stylesheet' href="Sources/DemoSheet.css" />
+        
+        
+        <!-- This calls our custom JavaScript file saved in the Sources folder -->
+        <script src="Sources/DemoScripts.js" ></script>
+    </head>
+    <body class="w3-center">
+        
+        <h1>Demo</h1>
+        
+        <!-- This div wraps around the number input feature shown at the top -->
+        <div class="w3-card" >
+            <div class="w3-row">
+                
+                <!-- 1st half | Number Input section -->
+                <div class="w3-half">
+                    <header class="w3-container w3-aqua w3-left-align">
+                        <h2>Number Inputs</h2>
+                    </header>
+
+                    <!-- This form takes two numbers and contains a button to submit them to a Javascript function on a mouse click -->
+                    <form class="w3-container w3-left-align">
+                        <label for="numberOne">Number 1:</label>
+                        <input type="number" id="numberOne" name="numberOne"><br>
+                        <label for="numberTwo">Number 2:</label>
+                        <input type="number" id="numberTwo" name="numberTwo"><br>
+                        <input type="button" class="w3-button w3-round-xlarge w3-aqua" onclick="calculateNumbers()" value="Submit"/>
+                    </form>
+                </div>
+                
+                <!-- 2nd half | Results from the number inputs -->
+                <div class="w3-half">
+                    <header class="w3-container w3-deep-purple w3-right-align">
+                        <h2>Results</h2>
+                    </header>
+                    
+                    <!-- This form lists the results from the number inputs on the left -->
+                    <form class="w3-container w3-right-align">
+                        <label for="addResult" >Sum: </label>
+                        <input id="addResult" name="addResult" type="text" disabled="disabled" /><br>
+
+                        <label for="subResult" >Difference: </label>
+                        <input id="subResult" name="subResult" type="text" disabled="disabled" /><br>
+
+                        <label for="multiResult" >Product: </label>
+                        <input id="multiResult" name="multiResult" type="text" disabled="disabled" /><br>
+
+                        <label for="divResult" >Quotient: </label>
+                        <input id="divResult" name="divResult" type="text" disabled="disabled" />
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <hr />
+        
+        <!-- Wrapper div for the surprise button -->
+        <div class="w3-container">
+            
+            <!-- A special div that shows a surprise when its button is clicked -->
+            <div id="buttonDiv" class="w3-card w3-amber show">
+                <h2>Hit the button for a surprise</h2>
+                
+                <input id="findButton" class="w3-button w3-round-xlarge w3-lime" name="findButton" type="button" onclick="showDiv();" value="Go!" />
+            </div>
+            
+            <!-- A hidden div that shows up when the findButton is clicked -->
+            <div id="fryDiv" class="w3-card w3-lime hidden" >
+                <h2>Surprise!</h2>
+                <input id="hideButton" class="w3-button w3-round w3-amber w3-left-align" name="hideButton" type="button" onclick="hideDiv();" value="Revert" />
+                
+                <!-- Visit this link to learn more about img tags: https://www.w3schools.com/tags/tag_img.asp -->
+                <img src="Images/FryBoy.jpeg" class="w3-border w3-padding w3-circle" width="200" height="400" alt="Fry guy lol" />
+                <p>The <em>mysterious</em> Fry</p>
+            </div>
+            
+        </div>
+        
+    </body>
+</html>

@@ -1,0 +1,15 @@
+/* 
+    Created on : Jan 1, 2022, 1:57:52 PM
+    Author     : Stan
+*/
+
+
+/* Custom classes used by our javascript */
+
+.hidden {
+    display: none;
+}
+
+.show {
+    display: block;
+}
